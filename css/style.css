@@ -62,10 +62,15 @@ nav button {
   border: none;
   cursor: pointer;
 }
+nav button a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 700;
+}
 
 nav button:hover {
   background: white;
-  color: #fca61f;
+  color: #fca61f !important;
   border: 2px solid #fca61f;
 }
 
