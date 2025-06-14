@@ -1,67 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adidev - Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <img src="assets/logo.png" alt="">
-            </div>
-            <div class="links">
-                <a href="">Home</a>
-                <a href="">About us</a>
-                <a href="">Services</a>
-            </div>
-            <button>Contact Us</button>
-            <svg xmlns="http://www.w3.org/2000/svg" class="hamburg" height="32" width="34" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-        </div>
-        <div class="dropmenu">
-            <a href="">Home</a>
-            <a href="">About us</a>
-            <a href="">Services</a>    
-            <button>Contact Us</button>
-            <svg xmlns="http://www.w3.org/2000/svg" class="cancel" height="36" width="32" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-        </div>
-    </nav>
-    <section>
-        <div class="content">
-            <div class="main-content">
-                <h1 data-aos="fade-right" data-aos-duration="1500">Hi! I Am</h1>
-                <span data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">adidev R</span>
-                <p data-aos="flip-up" data-aos-duration="1500" data-aos-delay="400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod deserunt consequuntur aut ea molestias.</p>
-                <div class="buttons">
-                    <button data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600">Hire me</button>
-                    <button data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600">See my Work</button>
-                </div>
-            </div>
-            <div class="image">
-                <img src="assets/adidev 2 profile.png" data-aos="zoom-out" data-aos-duration="2000">
-            </div>
-        </div>
-    </section>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({offset:1});
-    </script>
-    <script>
-        const hamburg = document.querySelector('.hamburg')
-        const cancel = document.querySelector('.cancel')
-        const navbar = document.querySelector('.dropmenu');
-        
-        hamburg.addEventListener('click', ()=>{
-            navbar.style.transform = "translateY(0px)"
-            hamburg.style.display = 'none'
-        })
-        cancel.addEventListener('click', ()=>{
-            navbar.style.transform = "translateY(-300px)"
-            hamburg.style.display = 'block'
-        })
-    </script>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        <img src="assets/21846815_6537942.svg" alt="Logo" />
+      </div>
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <!-- <a href="#skills">Skills</a> -->
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button>Hire Me</button>
+      <svg id="menuToggle" xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 96 960 960" width="30"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg>
+    </div>
+    <div class="dropmenu" id="dropdownMenu">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <!-- <a href="#skills">Skills</a> -->
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+  <button>Hire Me</button>
+</div>
+
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="content" id="home">
+    <div class="main-content">
+      <h1>Hello, I'm <span>ADIDEV R</span></h1>
+      <p>A passionate web developer who builds responsive and elegant websites.</p>
+      <div class="buttons">
+       <a href="assets/Adidev resume.pdf" target="_blank" class="btn">View CV</a>
+       <a href="#contact" class="btn">Contact Me</a>
+      </div>
+    </div>
+    <div class="image">
+      <img src="assets/adidev 2 profile.png" alt="Hero" />
+    </div>
+  </section>
+
+ <section id="about">
+  <h2>About Me</h2>
+  <div class="about-container">
+    <p>
+      Enthusiastic and dedicated student pursuing a degree in Mechanical Engineering, eager to gain hands-on experience through an internship.
+      Quick learner with a passion for continuous improvement and a strong desire to contribute meaningfully to real-world projects.
+    </p>
+
+    <div class="about-lists">
+      <div>
+        <h4>Core Skills</h4>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>React & Next.js</li>
+          <li>Version Control with Git</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Interests</h4>
+        <ol>
+          <li>UI/UX Design</li>
+          <li>Robotics & Automation</li>
+          <li>Tech Blogging</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Projects -->
+  <section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>A clean, responsive portfolio to showcase my work, built using HTML, CSS, and JavaScript with subtle animations and smooth navigation.</p>
+<a href="#" class="project-btn" >View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>E-commerce App</h3>
+      <p>Full-stack MERN e-commerce platform with cart, secure payments, product filtering, and an admin dashboard.</p>
+<a href="#" class="project-btn" >View Project</a>
+    </div>
+    <div class="project-card">
+      <h3>Blog Platform</h3>
+      <p>Full-stack blogging platform with user authentication, post creation, comments, and a responsive design.</p>
+      <a href="#" class="project-btn" >View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Task Tracker</h3>
+      <p>React-based task management tool with drag-and-drop interface, user authentication, and local storage persistence.</p>
+      <a href="#" class="project-btn" >View Project</a>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Contact -->
+ <section id="contact">
+  <h2>Contact</h2>
+  <p>You can reach me at:</p>
+  <a class="contact-btn" href="mailto:adidev1104@gmail.com">adidev1104@gmail.com</a>
+  <div class="social-links">
+    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 | Designed with ❤️ by Adidev R . All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+
+  <script>
+  const menuToggle = document.getElementById("menuToggle");
+  const dropdownMenu = document.getElementById("dropdownMenu");
+
+  // Toggle dropdown menu visibility
+  menuToggle.addEventListener("click", () => {
+    dropdownMenu.classList.toggle("open");
+  });
+
+  // Close dropdown when a menu item is clicked
+  const menuLinks = dropdownMenu.querySelectorAll("a, button");
+  menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      dropdownMenu.classList.remove("open");
+    });
+  });
+
+  // Optional: Close menu on outside click (mobile)
+  document.addEventListener("click", (e) => {
+    if (!menuToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+      dropdownMenu.classList.remove("open");
+    }
+  });
+
+  // Optional: Close menu on window resize (if going back to desktop)
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+      dropdownMenu.classList.remove("open");
+    }
+  });
+</script>
+
 </body>
 </html>
