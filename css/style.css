@@ -318,6 +318,7 @@ section h2 {
 
 
 #projects {
+  height: auto !important;
   background: linear-gradient(to right, #fffefc, #fdf6ea);
   padding: 80px 5%;
   text-align: center;
